@@ -15,6 +15,8 @@ abstract class Account{
 class FDAccount extends Account{
     int noOfDays,ageOfACHolder;
     double general, seniorCitizen;
+
+
     double calculateInterest(double amount) throws CustomException{
     this.amount=amount;
     Scanner scan = new Scanner(System.in);
@@ -85,8 +87,8 @@ class FDAccount extends Account{
     }
 }
 class SBAccount extends Account{
-    double interest;
-    double calculateInterest(double amount) throws CustomException{
+   /* double interest;*/
+    double calculateInterest(double amount) {
         this.amount = amount;
         System.out.println("Select Account Type: \n1. Normal\n2. NRI");
         Scanner s = new Scanner(System.in);
@@ -104,7 +106,7 @@ class SBAccount extends Account{
 }
 
 class RDAccount extends Account{
-    double interest, monthlyAmount, general, seniorCitizen;
+    double interest, general, seniorCitizen;
     int noOfMonths, age;
     double calculateInterest(double amount) throws CustomException{
         this.amount = amount;
